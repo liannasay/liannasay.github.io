@@ -1,0 +1,287 @@
+body {
+  margin: 0;
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  width: 100%;                       /* на мобильных — занимает весь экран */
+  max-width: 428px;                  /* фиксируем мобильную ширину (iPhone/Android стандарт) */
+  margin: 0 auto;                    /* центрирует на большом экране ПК */
+  background: #FEE2F8;
+  min-height: 100vh;
+  box-shadow: 0 0 30px rgba(0,0,0,0.15);  /* красивая тень, чтобы на ПК выглядело как "мобильное окошко" */
+  overflow-x: hidden;                /* предотвращает любой горизонтальный вылет */
+  box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+    font-size: 24px;
+    padding: 15px;
+    font-weight: bold;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 15px;
+}
+
+.card {
+    background: #FFD1F1;
+  border-radius: 15px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card-text {
+  flex-grow: 1;           /* толкает кнопку вниз */
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: #7D3066;
+}
+
+.author {
+  font-size: 14px;
+  color: #7D3066;
+  font-weight: 400;
+  margin: 2px 0 6px 0;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  color:#7D3066;
+  margin: 0;
+}
+
+button {
+    background: #ff4fa3;
+    color: #ffffff;
+    border: none;
+    padding: 12px;               /* ↑ увеличил вертикальный padding для комфорта */
+    border-radius: 10px;
+    margin-top: 12px;            /* ↑ чуть больше отступа сверху */
+    width: 100%;                 /* ← главное: растягивает на всю ширину */
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.header-image {
+  width: 100%;
+  max-width: 440px;              /* ← не даст картинке стать шире, чем нужно */
+  margin: 0 auto;                /* центрирует, если экран очень широкий */
+  padding: 0 10px;               /* маленькие отступы по бокам на узких экранах */
+  box-sizing: border-box;
+}
+
+.header-image img {
+  width: 100%;
+  height: auto;                  /* сохраняет пропорции */
+  display: block;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;                         /* центр экрана */
+  transform: translateX(-50%);       /* точное центрирование */
+  width: 100%;
+  max-width: 428px;                  /* та же ширина, что у .app */
+  height: 68px;
+  background: #ff62ae;               /* твой тёмный фон */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.916);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 16px;                   /* фиксированные отступы по бокам */
+  box-sizing: border-box;
+  z-index: 1000;
+
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  height: calc(68px + env(safe-area-inset-bottom, 0px));
+}
+
+/* Кнопки в панели */
+.nav-btn {
+  background: transparent;
+  border: none;
+  color: #ffd3f5;                         /* неактивный цвет */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 6px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 80px;
+}
+
+.nav-btn .icon {
+  font-size: 26px;                        /* размер иконок */
+}
+
+.nav-btn .label {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* Активная кнопка */
+.nav-btn.active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);  /* лёгкий бэкграунд для активной */
+}
+
+.nav-btn.active .icon {
+  transform: scale(1.15);
+}
+
+
+.app {
+  padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+  box-sizing: border-box;
+}
+
+
+body, html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.cart-items {
+  margin: 20px 0;
+}
+
+.cart-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #ffd1f1;
+  padding: 12px;
+  border-radius: 12px;
+  margin: 0 auto 12px;   /* центрирование */
+  max-width: 390px;    
+}
+
+.cart-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.item-info {
+  font-size: 30px;
+  flex: 1;              /* занимает всё свободное место */
+}
+
+.item-info div:last-child {
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+.cart-total {
+  font-size: 20px;
+  text-align: right;
+  margin: 24px 0;
+  padding: 16px;
+  background: #f9e8f5;
+  border-radius: 12px;
+}
+
+.back-link {
+  display: block;
+  text-align: center;
+  color: #ff4fa3;
+  font-size: 16px;
+  margin: 20px 0;
+  text-decoration: none;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #ffd1f1;
+  color: white;
+  border: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.item-info div:first-child {
+  font-weight: bold;
+  color: #7D3066;   /* цвет названия */
+}
+
+.item-info div:last-child {
+  color: #7D3066;   /* цвет цены */
+  font-weight: bold;
+}
+
+
+#checkoutBtn {
+  background: #ff4fa3;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  width: 90%;
+  margin: 20px auto 20px auto;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#checkoutBtn:hover {
+  background: #ff70b3;
+}
+.cart-total {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  margin: 16px;
+  padding: 16px;
+  background: #ffffff;     /* светло-розовый фон */
+  color: #ff70b3;           /* насыщенный фиолетовый текст */
+  border-radius: 12px;      /* скруглённые углы */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* лёгкая тень */
+}
+.nav-btn .icon img {
+  width: 26px;
+  height: 26px;
+  display: block;
+  transition: transform 0.2s;
+}
+
+/* актив кнопка чуть больше */
+.nav-btn.active .icon img {
+  transform: scale(1.15);
+}
+

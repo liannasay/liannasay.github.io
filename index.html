@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header-image">
+  <img src="image 1.jpg" alt="Art Gallery">
+</div>
+
+<div class="app">
+
+  <!-- ЭКРАН КАТАЛОГА -->
+  <div id="homeScreen">
+    <div class="gallery">
+
+      <div class="card">
+        <img src="Лунная стражница.jpg" alt="Лунная стражница">
+        <div class="card-text">
+          <div class="title">Лунная стражница</div>
+          <div class="author">Ноктюрна Райвен</div>
+          <div class="price">6000 ₽</div>
+        </div>
+        <button>В корзину</button>
+      </div>
+
+      <div class="card">
+        <img src="Пуговка старший.jpg" alt="Пуговка младший">
+        <div class="card-text">
+          <div class="title">Пуговка младший</div>
+          <div class="author">Пинк пуп</div>
+          <div class="price">4500 ₽</div>
+        </div>
+        <button>В корзину</button>
+      </div>
+
+      <div class="card">
+        <img src="Цветочный след.jpg" alt="Цветочный след">
+        <div class="card-text">
+          <div class="title">Цветочный след</div>
+          <div class="author">Tatyana Vovchek</div>
+          <div class="price">7000 ₽</div>
+        </div>
+        <button>В корзину</button>
+      </div>
+          <div class="card">
+      <img src="Взгляд.jpg" alt="Взгляд">
+      <div class="card-text">
+        <div class="title">Взгляд</div>
+        <div class="author">Миресса</div>
+        <div class="price">6500 ₽</div>
+      </div>
+      <button>В корзину</button>
+    </div>
+
+    <div class="card">
+      <img src="Д or З.jpg" alt="Д or 3">
+      <div class="card-text">
+        <div class="title">Д or 3</div>
+        <div class="author">Kriss Tin</div>
+        <div class="price">10000 ₽</div>
+      </div>
+      <button>В корзину</button>
+    </div>
+
+    <div class="card">
+      <img src="Умиротворение.jpg" alt="Умиротворение">
+      <div class="card-text">
+        <div class="title">Умиротворение</div>
+        <div class="author">Вечный</div>
+        <div class="price">9000 ₽</div>
+      </div>
+      <button>В корзину</button>
+    </div>
+
+    <div class="card">
+      <img src="Качельки.jpg" alt="Качельки">
+      <div class="card-text">
+        <div class="title">Качельки</div>
+        <div class="author">Лео Грин</div>
+        <div class="price">7900 ₽</div>
+      </div>
+      <button>В корзину</button>
+    </div>
+
+    <div class="card">
+      <img src="Космикот.jpg" alt="Космикот">
+      <div class="card-text">
+        <div class="title">Космикот</div>
+        <div class="author">Соня Шишкова</div>
+        <div class="price">4900 ₽</div>
+      </div>
+      <button>В корзину</button>
+    </div>
+
+
+    </div>
+  </div>
+
+  <!-- ЭКРАН КОРЗИНЫ -->
+<div id="cartScreen" style="display: none;">
+  <div class="cart-items"></div>
+
+  <div class="cart-total">
+    Итого: 0 ₽
+  </div>
+
+  <button id="checkoutBtn">Оформить заказ</button>
+</div>
+
+  <!-- НИЖНЯЯ ПАНЕЛЬ -->
+  <div class="bottom-nav">
+    <button class="nav-btn active" id="homeBtn">
+     <span class="icon">
+     <img src="home-icon-white.svg" alt="Главная" width="26" height="26">
+     </span>
+  </button>
+    
+   <button class="nav-btn" id="cartBtn">
+  <span class="icon">
+    <img src="card-hicon.svg" alt="Корзина" width="26" height="26">
+  </span>
+</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
