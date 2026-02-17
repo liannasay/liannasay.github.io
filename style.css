@@ -82,7 +82,7 @@ button {
 
 .header-image {
   width: 100%;
-  max-width: 440px;              /* ← не даст картинке стать шире, чем нужно */
+  max-width: 447px;              /* ← не даст картинке стать шире, чем нужно */
   margin: 0 auto;                /* центрирует, если экран очень широкий */
   padding: 0 10px;               /* маленькие отступы по бокам на узких экранах */
   box-sizing: border-box;
@@ -284,4 +284,5 @@ body, html {
 .nav-btn.active .icon img {
   transform: scale(1.15);
 }
+
 
